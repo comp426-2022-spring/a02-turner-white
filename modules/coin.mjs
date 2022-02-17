@@ -69,6 +69,12 @@ export function countFlips(array) {
       tailcount += 1;
     }
   }
+  if (tailcount == 0) {
+    return {heads:headcount}
+  }
+  if (headcount == 0) {
+    return {tails:tailcount}
+  }
   return { tails: tailcount, heads: headcount}
 }
 
